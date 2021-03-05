@@ -6,16 +6,27 @@ import Table from "react-bootstrap/Table";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { skills, pieData } from "./skils"
+import Image from "react-bootstrap/Image";
+import avatar from "./avatar.png"
+import { skills, pieData } from "./skils";
 import { Pie } from "@reactchartjs/react-chart.js";
 
 function App() {
   return (
     <Container fluid style={{marginTop: "10px"}}>
+      <Row className="justify-content-md-center mb-2">
+          <Image src={avatar} height={300} width={300} style={{backgroundColor: "rgba(64, 196, 255, 1)", border: "3px solid black", margin: "0px auto"}} roundedCircle/>
+      </Row>
+      <Row className="justify-content-md-center mb-2">
+        <Col lg="3" className="text-center">
+          <b style={{fontSize: "20px"}}><a href="https://linkedin.com/in/levi-gratico-3a33a0146" rel="noreferrer" target="_blank">Levi Gratico</a></b>
+          <address><a href="mailto:levigratico@gmail.com">levigratico@gmail.com</a></address>
+        </Col>
+      </Row>
       <Accordion defaultActiveKey="0">
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey="0">
-            ▶ Skills Rating & Experience
+            ▶ <b>Skills Rating & Experience</b>
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
             <Card.Body>
@@ -46,7 +57,7 @@ function App() {
         </Card>
         <Card>
         <Accordion.Toggle as={Card.Header} eventKey="1">
-          ▶ Chart
+          ▶ <b>Chart</b>
         </Accordion.Toggle>
         <Accordion.Collapse eventKey="1">
             <Card.Body>
